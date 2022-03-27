@@ -1,0 +1,72 @@
+
+<div class="container-fluid" >
+<div style="background-color:rgb(44, 44, 44)"  id="x1" >
+  <h4 class="d-flex justify-content-center" id="head1"></h4>
+  <h3 class="d-flex justify-content-center" id="head2" >ET Store Portal</h3>
+
+  <nav class="navbar navbar-expand-sm  justify-content-center ">
+    <ul class="navbar-nav ">
+      <li class="nav-item" >
+        <button class=" btn btn-outline-warning btn-lg "
+        (click)="Emp=false;Desg=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=false;sp=false;sale=false;home=true">Home</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-outline-light "
+        (click)="Emp=true;Desg=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=false;sp=false;sale=false;home=false">Employee</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=true;Emp=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=false;sp=false;sale=false;home=false">Designation</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-dark btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=true;cl=false;prod=false;pur=false;supp=false;sl=false;sp=false;sale=false;home=false">Customer</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=true;prod=false;pur=false;supp=false;sl=false;sp=false;sale=false;home=false">CustomerLedger</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=true;pur=false;supp=false;sl=false;sp=false;sale=false;home=false">Products</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=false;pur=true;supp=false;sl=false;sp=false;sale=false;home=false">Purchases</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=false;pur=false;supp=true;sl=false;sp=false;sale=false;home=false">Supplier</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=true;sp=false;sale=false;home=false">SupplierLedger</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=false;sp=true;sale=false;home=false">SalesProducts</button>
+      </li>
+      <li class="nav-item" >
+        <button class="m-1 btn btn-light btn-outline-light"
+        (click)="Desg=false;Emp=false;cust=false;cl=false;prod=false;pur=false;supp=false;sl=false;sp=false;sale=true;home=false">Sales</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-fluid" style="background-color:rgb(44, 44, 44)">
+    <p>
+
+    </p>
+  </div>
+</div>
+   <app-home *ngIf="home"></app-home>
+   <app-employee *ngIf="Emp"></app-employee>
+   <app-designation *ngIf="Desg"></app-designation>
+   <app-customer *ngIf="cust"></app-customer>
+   <app-custledg *ngIf="cl"></app-custledg>
+   <app-product *ngIf="prod"></app-product>
+   <app-purchase *ngIf="pur"></app-purchase>
+   <app-supplier *ngIf="supp"></app-supplier>
+   <app-suppledg *ngIf="sl"></app-suppledg>
+   <app-salesproduct *ngIf="sp"></app-salesproduct>
+   <app-sales *ngIf="sale"></app-sales>
+</div>
